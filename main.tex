@@ -80,7 +80,7 @@
 \affil[5]{KEMRI--Wellcome Trust Research Programme, Kilifi, Kenya}
 \affil[6]{Departments of Medicine \& Computer Science and Engineering, University of California, San Diego, CA, USA}
 \affil[7]{Department of Nuclear, Plasma, and Radiological Engineering, University of Illinois at Urbana--Champaign, Urbana, IL, USA}
-\affil[8]{Department of Psychology, Boston College, Chestnut Hill, MA, USA}
+\affil[8]{School of Psychology, University of Nottingham, Nottingham, United Kingdom}
 \affil[9]{Mozilla Foundation, Toronto, Ontario, Canada}
 \affil[10]{Media Lab, Massachusetts Institute of Technology, Cambridge, MA, USA \& The University of Dublin, Trinity College, Dublin, Ireland}
 \affil[11]{University of Tennessee Health Science Center, Memphis, TN, USA \& University Medical Centre Utrecht, Utrecht, The Netherlands}
@@ -276,21 +276,27 @@ Any code snippets included in \joss{} articles are subject to the MIT license~\c
 \subsection{Comparison with other software journals}
 \label{comparison}
 
-A good number of journals now accept, review, and publish software articles~\cite{software-papers-list}.
-Initially, the peer-review process for these software articles was the same as for any other research article, but this is now changing, particularly as journals that specialize in software have appeared: the \textit{Journal of Open Research Software} (\textit{JORS},
+A good number of journals now accept, review, and publish software articles~\cite{software-papers-list}, 
+\add{which we group into two categories.
+The first category of journals include those similar to \joss{}, which do not focus on a specific domain and only consider submissions of software\slash software articles:} 
+the \textit{Journal of Open Research Software} (\textit{JORS},
 \href{http://openresearchsoftware.metajnl.com}{openresearchsoftware.metajnl.com}),
-\textit{SoftwareX}
+\textit{SoftwareX} 
 (\href{https://www.journals.elsevier.com/softwarex/}{journals.elsevier.com/softwarex/}), and now \joss{}.
-Both \textit{JORS}~\cite{jorsreview}
-%(\href{http://openresearchsoftware.metajnl.com/about/#q4}{openresearchsoftware.metajnl.com/about/\#q4})
-and \textit{SoftwareX}~\cite{els-software}
-%(\href{https://www.elsevier.com/books-and-journals/enrichments/original-software-publications#submission}{elsevier.com/books-and-journals/enrichments/original-software-publications\#submission})
-now review both the article text and the software.
-%
+Both \textit{JORS}~\cite{jorsreview} and \textit{SoftwareX}~\cite{els-software}
+now review both the article text and the software. 
 In \joss{}, the review process focuses mainly on the software and associated material (e.g., documentation) and less on the article text, which is intended to be a brief description of the software.
 The role and form of peer review also varies across journals.
 In \textit{SoftwareX} and \textit{JORS}, the goal of the review is both to decide if the article is acceptable for publication and to improve it iteratively through a non-public, editor-mediated interaction between the authors and the anonymous reviewers.
 In contrast, \joss{} has the goal of accepting most articles after improving them as needed, with the reviewers and authors communicating directly and publicly through GitHub issues.
+
+\add{
+The second category includes domain-specific journals that either accept software articles as a special submission type or exclusively consider software articles targeted at the domain.
+For example, \textit{Collected Algorithms} (CALGO) is a long-running venue for reviewing and sharing mathematical algorithms associated with articles published in \textit{Transactions on Mathematical Software} and other ACM journals. 
+However, CALGO authors must transfer copyright to ACM and software is not available under an open-source license---this contrasts with \joss{}, where authors retain copyright and software must be shared under an open-source license.
+\textit{Computer Physics Communications} and \textit{Geoscientific Model Development} publish full-length articles describing application software in computational physics and geoscience, respectively, where review primarily focuses on the article.
+Chue Hong maintains a list of journals in both categories~\cite{software-papers-list}.
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -308,10 +314,13 @@ Figure~\ref{fig:submission-flow} shows a typical \joss{} submission and review p
 \item Leland McInnes submitted the \texttt{hdbscan} software and article to \joss{} on 26 February 2017 using the web application and submission tool.
 The article is a Markdown file named \texttt{paper.md}, visibly located in the software repository (here, and in many cases, placed together with auxiliary files in a \texttt{paper} directory).
 
-\item Following a routine check by a \joss{} administrator, a ``pre-review'' issue was created in the \texttt{joss-reviews} GitHub repository~\cite{hdbscan-joss-pre-review}. In this pre-review issue, an editor (Daniel S.~Katz) was assigned, who then identified and assigned a suitable reviewer (Zhao Zhang). The editor then asked the automated bot \texttt{Whedon} to create the main submission review issue via the command \texttt{@whedon start review magic-word=bananas}. (``\texttt{magic-word=bananas}'' is a safeguard against accidentally creating a review issue prematurely.)
+\item Following a routine check by a \joss{} administrator, a ``pre-review'' issue was created in the \texttt{joss-reviews} GitHub repository~\cite{hdbscan-joss-pre-review}. In this pre-review issue, an editor (Daniel S.~Katz) was assigned, who then identified and assigned a suitable reviewer (Zhao Zhang). 
+\add{Editors generally identify one or more reviewers from a pool of volunteers based on provided programming language and\slash or domain expertise.}\footnote{Potential reviewers can volunteer via \url{http://joss.theoj.org/reviewer-signup.html}}
 
-\item The reviewer then conducted the submission review in~\cite{hdbscan-joss-review} (see Figure~\ref{fig:review}) by working through a checklist of review items, as described in \S\ref{review-details}. The author, reviewer, and editor discussed any questions that arose during the review, and once the reviewer completed their checks, they notified the submitting author and editor.
-Compared with traditional journals, \joss{} offers the unique feature of holding a discussion---in the open within a GitHub issue---between the reviewer(s), author(s), and editor.
+The editor then asked the automated bot \texttt{Whedon} to create the main submission review issue via the command \texttt{@whedon start review magic-word=bananas}. (``\texttt{magic-word=bananas}'' is a safeguard against accidentally creating a review issue prematurely.)
+
+\item The reviewer then conducted the submission review~\cite{hdbscan-joss-review} (see Figure~\ref{fig:review}) by working through a checklist of review items, as described in \S\ref{review-details}. The author, reviewer, and editor discussed any questions that arose during the review, and once the reviewer completed their checks, they notified the submitting author and editor. 
+Compared with traditional journals, \joss{} offers the unique feature of holding a discussion---in the open within a GitHub issue---between the reviewer(s), author(s), and editor. 
 Like a true conversation, discussion can go back and forth in minutes or seconds, with all parties contributing at will. This contrasts traditional journal reviews, where the process is merely an exchange between the reviewer(s) and author(s), via the editor, which can take months for each communication, and in practice is limited to one or two, perhaps three in some cases, exchanges due to that delay~\cite{tennant-peerreview}.
 
 Note that \joss{} reviews are subject to a code of conduct~\cite{code-of-conduct}, adopted from the Contributor Covenant Code of Conduct~\cite{contributor-covenant-coc}.
@@ -446,8 +455,10 @@ responses). In contrast, the latter case took much longer due to
 delays in selecting an editor and finding an appropriate reviewer, and a
 multimonth delay between selecting a reviewer and receiving reviews.
 In other cases with long review periods, some delays in responding to requests
-for updates may be attributed to reviewers (or editors) missing GitHub
-emails from the review issue comments.
+for updates may be attributed to reviewers (or editors) missing GitHub \add{notifications}
+from the review issue comments. 
+\add{We have already taken steps to improve the ability of authors, reviewers, and editors to keep track of their submissions, including a prompt to new reviewers to unsubscribe from the main \texttt{joss-reviews} repository~\cite{joss-reviews} (to reduce unnecessary notifications) and a weekly digest email for \joss{} editors to keep track of their submissions. In the future we may collect the email addresses of reviewers so we can extend this functionality to them.
+}
 
 \begin{figure}[htbp]
     \centering
@@ -459,7 +470,9 @@ emails from the review issue comments.
 
 Figure~\ref{fig:programming_languages} shows the frequency of programming languages appearing
 in \joss{} articles. Python appears the most with over half of published software articles
-(54), while R is used in nearly one-third of articles (29).
+(54), while R is used in nearly one-third of articles (29). 
+\add{We believe the popularity of Python and R in \joss{} submissions is the result of (1) the adoption of these languages (and open-source practices) in scientific computing communities and (2) our relationship with the rOpenSci project.
+}
 
 \begin{figure}[htbp]
     \centering
