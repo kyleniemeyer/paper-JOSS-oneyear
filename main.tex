@@ -47,7 +47,7 @@
 % \renewcommand{\delete}[1]{}
 % \renewcommand{\deletenoso}[1]{}
 
-% remove for final 
+% remove for final
 %\usepackage{lineno}
 
 \newcommand\joss{\textit{JOSS}}
@@ -98,14 +98,14 @@
 %\linenumbers
 
 \begin{abstract}
-This article describes the motivation, design, and progress of the Journal of Open Source Software (\joss{}). 
-\joss{} is a free and open-access journal that publishes articles describing research software. 
-It has the dual goals of improving the quality of the software submitted and providing a mechanism for research software developers to receive credit. 
+This article describes the motivation, design, and progress of the Journal of Open Source Software (\joss{}).
+\joss{} is a free and open-access journal that publishes articles describing research software.
+It has the dual goals of improving the quality of the software submitted and providing a mechanism for research software developers to receive credit.
 While designed to work within the current merit system of science, \joss{}
 addresses the dearth of rewards for key contributions to science made in the form of software.
 \joss{} publishes articles that encapsulate scholarship contained in the software itself, and its rigorous peer review targets the software components: functionality, documentation, tests, continuous integration, and the license.
 A \joss{} article contains an abstract describing the purpose and functionality of the software, references, and a link to the software archive.
-The article is the entry point of a \joss{} submission, which encompasses the full set of software artifacts. 
+The article is the entry point of a \joss{} submission, which encompasses the full set of software artifacts.
 Submission and review proceed in the open, on GitHub.
 Editors, reviewers, and authors work collaboratively and openly.
 Unlike other journals, \joss{} does not reject articles requiring major revision; while not yet accepted, articles remain visible and under review until the authors make adequate changes (or withdraw, if unable to meet requirements).
@@ -121,14 +121,14 @@ In its first year, starting in May 2016, \joss{} published 111 articles, with mo
 Modern scientific research produces many outputs beyond traditional articles and books. Among these, research software is critically important for a broad spectrum of fields.
 Current practices for publishing and citation do not, however, acknowledge software as a first-class research output. This deficiency means that researchers who develop software face critical career barriers.
 The \textit{Journal of Open Source Software} (\joss{}) was founded in May 2016 to offer a solution within the existing publishing mechanisms of science.
-It is a developer-friendly, free and open-access, peer-reviewed journal for research software packages. 
-\joss{} recently passed its first anniversary, having published more than a hundred articles. 
+It is a developer-friendly, free and open-access, peer-reviewed journal for research software packages.
+\joss{} recently passed its first anniversary, having published more than a hundred articles.
 This article discusses the motivation for creating a new software journal, delineates the editorial and review process, and summarizes the journal's first year of operation via submission statistics.
 
-The sixteen authors of this article are the members of the \joss{} Editorial Board at the end of its first year (May 2017). Arfon Smith is the founding editor-in-chief, and the founding editors are Lorena A.~Barba, Kathryn Huff, Daniel Katz, Christopher Madan, Abigail Cabunoc Mayes, Kevin Moerman, Kyle Niemeyer, Karthik Ram, Tracy Teal, and Jake Vanderplas. 
+The sixteen authors of this article are the members of the \joss{} Editorial Board at the end of its first year (May 2017). Arfon Smith is the founding editor-in-chief, and the founding editors are Lorena A.~Barba, Kathryn Huff, Daniel Katz, Christopher Madan, Abigail Cabunoc Mayes, Kevin Moerman, Kyle Niemeyer, Karthik Ram, Tracy Teal, and Jake Vanderplas.
 Five new editors joined in the first year to handle areas not well covered by the original editors, and to help manage the large and growing number of submissions. They are George Githinji, Melissa Gymrek, Pjotr Prins, Ariel Rokem, and Roman Valls Guimera.
 
-The \joss{} editors are firm supporters of open-source software for research, with extensive knowledge of the practices and ethics of open source. This knowledge is reflected in the \joss{} submission system, peer-review process, and infrastructure. The journal offers a familiar environment for developers and authors to interact with reviewers and editors, leading to a citable published work: a software article. 
+The \joss{} editors are firm supporters of open-source software for research, with extensive knowledge of the practices and ethics of open source. This knowledge is reflected in the \joss{} submission system, peer-review process, and infrastructure. The journal offers a familiar environment for developers and authors to interact with reviewers and editors, leading to a citable published work: a software article.
 With a Crossref digital object identifier (DOI), the article is able to collect citations, empowering the developers/authors to gain career credit for their work.
 \joss{} thus fills a pressing need for computational researchers to advance professionally, while promoting higher quality software for science.
 
@@ -137,15 +137,15 @@ With a Crossref digital object identifier (DOI), the article is able to collect 
 
 %\subsection{The importance of software for science}
 
- 
-A 2014 study of UK Russell Group Universities~\cite{Hettrick} reports that $\sim$90\% of academics surveyed said they use software in their research, while more than 70\% said their research would be impractical without it.  
+
+A 2014 study of UK Russell Group Universities~\cite{Hettrick} reports that $\sim$90\% of academics surveyed said they use software in their research, while more than 70\% said their research would be impractical without it.
 About half of these UK academics said they develop their own software while in the course of doing research.
 Similarly, a 2017 survey of members of the US National Postdoctoral Association found that 95\% used research software, and 63\% said their research would be impractical without it~\cite{US-PDA-survey}.
 
-Despite being a critical part of modern research, software lacks support across the scholarly ecosystem for its publication, acknowledgement, and citation~\cite{Niemeyer:2016sc}. 
+Despite being a critical part of modern research, software lacks support across the scholarly ecosystem for its publication, acknowledgement, and citation~\cite{Niemeyer:2016sc}.
 Academic publishing has not changed substantially since its inception.
 Science, engineering, and many other academic fields still view research articles as the key indicator of research productivity, with research grants being another important indicator.
-Yet, the research article is inadequate to fully describe modern, data-intensive, computational research. 
+Yet, the research article is inadequate to fully describe modern, data-intensive, computational research.
 \joss{} focuses on research software and its place in the scholarly publishing ecosystem.
 
 \subsection{Why publish software?}
@@ -153,7 +153,7 @@ Yet, the research article is inadequate to fully describe modern, data-intensive
 Most academic fields still rely on a one-dimensional credit model where academic articles and their associated citations are the dominant factor in the success of a researcher's career. Software creators, in order to increase the likelihood of receiving career credit for their work, often choose to publish ``software articles'' that act as placeholder publications pointing to their software.
 At the same time, recent years have seen a push for sharing open research software~\cite{Barnes:2010ut,Vandewalle:2012cl,Morin:2012hz,Ince:2012iy,NatureMethodsEditorialBoard:2014gu,Prins:natbio}.
 
-Beyond career-credit arguments for software creators, publishing research software enriches the scholarly record. Buckheit and Donoho paraphrased Jon Claerbout, a pioneer of reproducible research, as saying: ``An article about a computational result is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result.''~\cite{Buckheit1995}. 
+Beyond career-credit arguments for software creators, publishing research software enriches the scholarly record. Buckheit and Donoho paraphrased Jon Claerbout, a pioneer of reproducible research, as saying: ``An article about a computational result is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result.''~\cite{Buckheit1995}.
 The argument that articles about computational science are not satisfactory descriptions of the work, needing to be supplemented by code and data, is more than twenty years old! Yet, despite the significance of software in modern research, documenting its use and including it in the scholarly ecosystem presents numerous challenges.
 
 
@@ -168,7 +168,7 @@ Even when software (and data) are published so that they can be cited, we do not
 
 The developer's next dilemma is where to publish, given the research content, novelty, length and other features of a software article.
 %
-Since 2012, Neil Chue Hong has maintained a growing list of journals that accept software articles~\cite{software-papers-list}. 
+Since 2012, Neil Chue Hong has maintained a growing list of journals that accept software articles~\cite{software-papers-list}.
 He includes both generalist journals, accepting software articles from a variety of fields, and domain-specific journals, accepting both research and software articles in a given field.
 %
 For many journals, particularly the domain-specific ones, a software article must include novel results to justify publication.
@@ -180,7 +180,7 @@ These issues may lead developers to shun the idea of software articles and prefe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Journal of Open Source Software}
 
-To tackle the challenges mentioned above, the \textit{Journal of Open Source Software} (\joss{}) launched in May 2016~\cite{arfondotorg} with the goal of drastically reducing the overhead of publishing software articles. 
+To tackle the challenges mentioned above, the \textit{Journal of Open Source Software} (\joss{}) launched in May 2016~\cite{arfondotorg} with the goal of drastically reducing the overhead of publishing software articles.
 \joss{} offers developers a venue to publish their research software\delete{, dressed up as software articles} \add{with brief high-level articles}, thus enabling citation credit for their work.
 In this section we describe the goals and principles, infrastructure, and business model of \joss{}, and compare it with other software journals.
 
@@ -190,7 +190,7 @@ In this section we describe the goals and principles, infrastructure, and busine
 \joss{} articles are deliberately short and only include an abstract describing the high-level functionality of the software, a list of the authors of the software (with their affiliations), a list of key references, and a link to the software archive and software repository. Articles are not allowed to include other content often found in software articles, such as descriptions of the API (application programming interface) and novel research results obtained using the software.
 The software API should already be described in the software documentation, and domain research results do not belong in \joss{}---these should be published in a domain journal.
 
-The \joss{} design and %review process 
+The \joss{} design and %review process
 implementation are based on the following principles:
 \begin{itemize}
     \item Other than their short length, \joss{} articles are conventional articles in every other sense: the journal has an ISSN, articles receive Crossref DOIs with high-quality submission metadata, and articles are appropriately archived.
@@ -221,7 +221,7 @@ Acceptable \joss{} submissions also need to meet the following criteria:
 
 \subsubsection*{The \joss{} web application and submission tool}
 
-The \joss{} web application and submission tool is hosted at \href{http://joss.theoj.org}{http://joss.theoj.org}. It is a simple Ruby on Rails web application~\cite{joss-site} that lists accepted articles, provides the article submission form (see Figure~\ref{fig:submission}), and hosts journal documentation such as author submission guidelines. 
+The \joss{} web application and submission tool is hosted at \href{http://joss.theoj.org}{http://joss.theoj.org}. It is a simple Ruby on Rails web application~\cite{joss-site} that lists accepted articles, provides the article submission form (see Figure~\ref{fig:submission}), and hosts journal documentation such as author submission guidelines.
 This application also automatically creates the review issue on GitHub once a submission has been pre-reviewed by an editor and accepted to start peer review in \joss{}.
 
 
@@ -244,10 +244,10 @@ This application also automatically creates the review issue on GitHub once a su
 \label{fig:review}}
 \end{figure}
 
-\subsubsection*{Whedon and the Whedon-API} 
+\subsubsection*{Whedon and the Whedon-API}
 
 Many of the tasks associated with \joss{} reviews and editorial management are automated.
-A core RubyGem library named \texttt{Whedon}~\cite{whedon-gem} handles common tasks associated with managing the submitted manuscript, such as compiling the article (from its Markdown source) and creating Crossref metadata. 
+A core RubyGem library named \texttt{Whedon}~\cite{whedon-gem} handles common tasks associated with managing the submitted manuscript, such as compiling the article (from its Markdown source) and creating Crossref metadata.
 An automated bot, \texttt{Whedon-API}~\cite{whedon-api}, handles other parts of the review process (such as assigning editors and reviewers based on editor input) and leverages the \texttt{Whedon} RubyGem library.
 For example, to assign the editor for a submission, one may type the following command in a comment box within the GitHub issue: \texttt{@whedon assign @danielskatz as editor}. Similarly, to assign a reviewer, one enters: \texttt{@whedon assign @zhaozhang as reviewer} (where the reviewer and editor GitHub handles identify them). The next section describes the review process in more detail.
 
@@ -261,13 +261,13 @@ For example, to assign the editor for a submission, one may type the following c
   \item{\joss{} web application hosting (currently with Heroku): \$19 per month}
 \end{itemize}
 
-Assuming a publication rate of 100 articles per year results in a core operating cost of $\sim$\$6 per article. 
+Assuming a publication rate of 100 articles per year results in a core operating cost of $\sim$\$6 per article.
 With 200 articles per year---which seems possible for the second
 year---the cost drops to $\sim$\$3.50 per article:
 \begin{align}\label{costs}
 (\$275 + (\$1 \times 100) + (\$19 \times 12)) / 100 &= \$6.03 \\
 (\$275 + (\$1 \times 200) + (\$19 \times 12)) / 200 &= \$3.51 \;.
-\end{align} 
+\end{align}
 
 Submitting authors retain copyright of \joss{} articles and accepted articles are published under a Creative Commons Attribution 4.0 International License~\cite{cc}.
 Any code snippets included in \joss{} articles are subject to the MIT license~\cite{mit} regardless of the license of the submitted software package under review, which itself must be licensed under an OSI-approved license (see \href{https://opensource.org/licenses/alphabetical}{opensource.org/licenses/alphabetical} for a complete list).
@@ -287,7 +287,7 @@ Both \textit{JORS}~\cite{jorsreview} and \textit{SoftwareX}~\cite{els-software}
 now review both the article text and the software. 
 In \joss{}, the review process focuses mainly on the software and associated material (e.g., documentation) and less on the article text, which is intended to be a brief description of the software.
 The role and form of peer review also varies across journals.
-In \textit{SoftwareX} and \textit{JORS}, the goal of the review is both to decide if the article is acceptable for publication and to improve it iteratively through a non-public, editor-mediated interaction between the authors and the anonymous reviewers. 
+In \textit{SoftwareX} and \textit{JORS}, the goal of the review is both to decide if the article is acceptable for publication and to improve it iteratively through a non-public, editor-mediated interaction between the authors and the anonymous reviewers.
 In contrast, \joss{} has the goal of accepting most articles after improving them as needed, with the reviewers and authors communicating directly and publicly through GitHub issues.
 
 \add{
@@ -308,7 +308,7 @@ In this section, we illustrate the \joss{} submission and review process using a
 
 \subsection{The \joss{} process}
 
-Figure~\ref{fig:submission-flow} shows a typical \joss{} submission and review process, described here in more detail using the \texttt{hdbscan} package~\cite{McInnes2017} as an example: 
+Figure~\ref{fig:submission-flow} shows a typical \joss{} submission and review process, described here in more detail using the \texttt{hdbscan} package~\cite{McInnes2017} as an example:
 
 \begin{enumerate}
 \item Leland McInnes submitted the \texttt{hdbscan} software and article to \joss{} on 26 February 2017 using the web application and submission tool.
@@ -347,15 +347,18 @@ Both authors and reviewers must confirm that they have read and will adhere to t
 \subsection{\joss{} review criteria}\label{review-details}
 
 As previously mentioned, the \joss{} review is primarily concerned with the material
-in the software repository, focusing on the software and documentation. 
+in the software repository, focusing on the software and documentation.
 The specific items in the reviewer checklist are:
 
 \begin{itemize}
 \item Conflict of interest
 
 \begin{itemize}
-    \item As the reviewer I confirm that there are no conflicts of interest for me to review this work (such as being a major contributor to the software).
-\end{itemize} 
+    \item As the reviewer I confirm that
+    \delete{there are no conflicts of interest for me to review this work (such as being a major contributor to the software).}
+    \add{I have read the \joss{} \href{https://github.com/openjournals/joss/blob/master/COI.md}{conflict of interest policy}
+    and that there are no conflicts of interest for me to review this work.}
+\end{itemize}
 
 \item Code of Conduct
 \begin{itemize}
@@ -377,7 +380,7 @@ The specific items in the reviewer checklist are:
     \item \textbf{Installation}: Does installation proceed as outlined in the documentation?
     \item \textbf{Functionality}: Have the functional claims of the software been confirmed?
     \item \textbf{Performance}: Have any performance claims of the software been confirmed?
-\end{itemize} 
+\end{itemize}
 
 
 \item Documentation
@@ -389,7 +392,7 @@ The specific items in the reviewer checklist are:
     \item \textbf{Functionality documentation}: Is the core functionality of the software documented to a satisfactory level (e.g., API method documentation)?
     \item \textbf{Automated tests}: Are there automated tests or manual steps described so that the function of the software can be verified?
     \item \textbf{Community guidelines}: Are there clear guidelines for third parties wishing to 1) contribute to the software 2) report issues or problems with the software, and 3) seek support?
-\end{itemize} 
+\end{itemize}
 
 \item Software paper
 
@@ -397,18 +400,18 @@ The specific items in the reviewer checklist are:
     \item \textbf{Authors}: Does the \texttt{paper.md} file include a list of authors with their affiliations?
     \item \textbf{A statement of need}: Do the authors clearly state what problems the software is designed to solve and who the target audience is?
     \item \textbf{References}: Do all archival references that should have a DOI list one (e.g., papers, datasets, software)?
-\end{itemize} 
+\end{itemize}
 
-\end{itemize} 
+\end{itemize}
 
 
 
 \subsection{Fast track for reviewed rOpenSci contributions}
 
 For submissions of software that has already been reviewed under rOpenSci's rigorous
-onboarding guidelines~\cite{Ram:2016ws,Ram2017}, \joss{} does not perform 
-further review. The editor-in-chief is alerted with a note 
-``This submission has been accepted to rOpenSci. The review thread can be 
+onboarding guidelines~\cite{Ram:2016ws,Ram2017}, \joss{} does not perform
+further review. The editor-in-chief is alerted with a note
+``This submission has been accepted to rOpenSci. The review thread can be
 found at \texttt{[LINK TO ONBOARDING ISSUE]},''  allowing such submissions to be fast-tracked to  acceptance.
 
 
@@ -418,7 +421,7 @@ found at \texttt{[LINK TO ONBOARDING ISSUE]},''  allowing such submissions to be
 
 By the end of May 2017, \joss{} published 111 articles since its
 inception in May 2016, and had an additional 41 articles under consideration.
-Figure~\ref{fig:article_stats} shows the monthly and cumulative publication rates; 
+Figure~\ref{fig:article_stats} shows the monthly and cumulative publication rates;
 on average, we published 8.5 articles per month, with some (nonstatistical) growth over time.
 
 %\todo[inline]{an interesting (anecdotal) observation from extracting software programming languages: more than anyone else, R package developers seem most likely to not mention the language they are using, as if they assume R is the only thing...}
@@ -441,14 +444,14 @@ on average, we published 8.5 articles per month, with some (nonstatistical) grow
 
 Figure~\ref{fig:article_review} shows the numbers of days taken for processing
 and review of the 111 published articles (i.e., time between submission
-and publication), including finding a topic editor and reviewer(s). Since 
+and publication), including finding a topic editor and reviewer(s). Since
 the journal's inception in May 2016, articles spent on average 45.5 days
 between submission and publication (median 32 days, interquartile range 52.3 days)
 The shortest review took a single day, for \texttt{Application
-Skeleton}~\cite{Zhang2016:joss}, while the longest review took 190 days, 
+Skeleton}~\cite{Zhang2016:joss}, while the longest review took 190 days,
 for \texttt{walkr}~\cite{YuZhuYao2017:joss}. In the former case, the rapid turnaround
 can be attributed to the relatively minor revisions needed (in addition to quick editor, reviewer, and author actions and
-responses). In contrast, the latter case took much longer due to 
+responses). In contrast, the latter case took much longer due to
 delays in selecting an editor and finding an appropriate reviewer, and a
 multimonth delay between selecting a reviewer and receiving reviews.
 In other cases with long review periods, some delays in responding to requests
@@ -461,7 +464,7 @@ from the review issue comments.
     \centering
     \includegraphics[width=0.7\textwidth]{JOSS-article-review-times.pdf}
     \caption{Days between submission and publication dates of the 111 articles \joss{} has published, between May 2016--May 2017.
-    Data, plotting script, and figure file is available~\cite{JOSS-data-figs}.}
+    Data, plotting script, and figure file are available~\cite{JOSS-data-figs}.}
     \label{fig:article_review}
 \end{figure}
 
@@ -487,31 +490,31 @@ or more reviewers. The set of 111 published articles have been
 reviewed by 93 unique reviewers.
 The majority of articles received a review by
 one reviewer (average of $1.11\pm 0.34$), with a maximum of
-three reviewers. 
-Based on available data in the review issues, on average, editors reached out 
+three reviewers.
+Based on available data in the review issues, on average, editors reached out
 to 1.85$\pm$1.40 potential reviewers (at most 8 in one case) via mentions
 in the GitHub review issue. This does not include external communication,
 e.g., via email or Twitter. Overall, \joss{} editors contacted 1.65
 potential reviewers for each actual review (based on means).
 
-Interestingly, the current reviewer list contains only 52 entries, as of 
+Interestingly, the current reviewer list contains only 52 entries, as of
 this writing~\cite{JOSS-reviewers}. Considering the unique reviewer count of 93,
 we clearly have reached beyond those that volunteered to review a priori.
-Benefits of using GitHub's issue infrastructure and our open reviews include: 
-1) the ability to tag multiple people, via their GitHub handles, to invite them as potential reviewers; 
-2) the discoverability of the work so that people may volunteer to review without being formally contacted; 
-3) the ability to get additional, unprompted feedback and comments; and 
+Benefits of using GitHub's issue infrastructure and our open reviews include:
+1) the ability to tag multiple people, via their GitHub handles, to invite them as potential reviewers;
+2) the discoverability of the work so that people may volunteer to review without being formally contacted;
+3) the ability to get additional, unprompted feedback and comments; and
 4) the ability to find reviewers by openly advertising, e.g., on social media.
 Furthermore, GitHub is a well-known, commonly used platform where many (if not most) potential authors and reviewers already have accounts.
 
 Figure~\ref{fig:editors} shows the numbers of articles managed by each of the
-\joss{} editors. 
-Editor-in-chief Arfon Smith stewarded 
-the majority of articles published in the 
+\joss{} editors.
+Editor-in-chief Arfon Smith stewarded
+the majority of articles published in the
 first year. This was somewhat unavoidable
-in the first three months after launch, as 
+in the first three months after launch, as
 Smith served as the de facto sole editor for all submissions, with other members of the editorial
-board assisting. 
+board assisting.
 This strategy was not sustainable and, over time, we adopted the pre-review\slash review procedure to hand off articles to editors.
 Also, authors can now select during submission the appropriate editor based on article topic.
 
@@ -526,8 +529,8 @@ Also, authors can now select during submission the appropriate editor based on a
 \end{figure}
 
 In its first year, \joss{} also developed formal relationships with two US-based nonprofit organizations. In March 2017, \joss{} became a community affiliate of the Open Source Initiative (\href{https://opensource.org}{opensource.org}), the steward of the open-source definition, which promotes open-source software and educates about appropriate software licenses.
-And, in April 2017, \joss{} became a fiscally sponsored project of NumFOCUS (\href{https://www.numfocus.org}{numfocus.org}), a 501(c)(3) charity that supports and promotes ``world-class, innovative, open source scientific computing.'' 
-Being associated with these two prominent community organizations increases the trust of the community in our efforts. 
+And, in April 2017, \joss{} became a fiscally sponsored project of NumFOCUS (\href{https://www.numfocus.org}{numfocus.org}), a 501(c)(3) charity that supports and promotes ``world-class, innovative, open source scientific computing.''
+Being associated with these two prominent community organizations increases the trust of the community in our efforts.
 Furthermore, as a NumFOCUS project, \joss{} will be able to raise funding to sustain its activities and grow.
 
 
@@ -535,13 +538,17 @@ Furthermore, as a NumFOCUS project, \joss{} will be able to raise funding to sus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The next year for \joss{}}
 
-Our focus for the next year will be on continuing to provide a high-quality experience for submitting authors and reviewers, and making best use of the editorial board. In our first year, we progressed from a model where the editor-in-chief handled most central functions to one with more distributed roles for the editors, particularly that of ensuring that reviews are useful and timely. 
-Editors can now select and self-assign to submissions they want to manage, while the editor-in-chief only assigns the remaining submissions. 
+Our focus for the next year will be on continuing to provide a high-quality experience
+for submitting authors and reviewers, and making \add{the} best use of the editorial board.
+In our first year, we progressed from a model where the editor-in-chief handled
+most central functions to one with more distributed roles for the editors,
+particularly that of ensuring that reviews are useful and timely.
+Editors can now select and self-assign to submissions they want to manage, while the editor-in-chief only assigns the remaining submissions.
 As \joss{} grows, the process of distributing functions across the editorial board will continue to evolve---and more editors may be needed.
 
 In the next year, we plan to complete a number of high-priority improvements to the \joss{} toolchain.
-Specifically, we plan on automating the final steps for accepting an article. 
-For example, generating Crossref metadata and compiling the article are both currently handled by the editor-in-chief on his local machine using the \texttt{Whedon} RubyGem library. 
+Specifically, we plan on automating the final steps for accepting an article.
+For example, generating Crossref metadata and compiling the article are both currently handled by the editor-in-chief on his local machine using the \texttt{Whedon} RubyGem library.
 In the future, we would like authors and reviewers to be able to ask the \texttt{Whedon-API} bot to compile the paper for them, and other editors should be able to ask the bot to complete the submission of Crossref metadata on their behalf.
 Other improvements are constantly under discussion on the \joss{} GitHub repository
 (\href{https://github.com/openjournals/joss/issues}{github.com/openjournals/joss/issues}).
@@ -549,7 +556,7 @@ In fact, anyone is able to report bugs and suggest enhancements to the experienc
 And, since the \joss{} tools are open source, we welcome contributions in the form of bug-fixes or enhancements via the usual pull-request protocols.
 
 Beyond roles and responsibilities for the editors, and improvements to the \joss{} tools and infrastructure, we will take on the more tricky questions about publishing software.
-One of these is how to handle new software versions. 
+One of these is how to handle new software versions.
 Unlike traditional research articles, which once published are static, software needs to change
 over time, at least for maintenance and to avoid software
 rot\slash collapse (where software stops working because
@@ -564,11 +571,11 @@ software developers frequently rename the software with a new
 version number. Following semantic versioning practices (where software versions are of the form \texttt{MAJOR.MINOR.PATCH}, see \href{http://semver.org}{semver.org}), a small
 set of changes may lead to an increased version of the software;
 i.e., the patch element of the version number is incremented,
-or possibly the minor element is incremented if enough changes have been made. 
-Once the developers determine the set of changes has 
-grown large enough or if the API changed in a way 
-that makes downstream software unable to use it any longer 
-(a backward-incompatible change), the major version number of 
+or possibly the minor element is incremented if enough changes have been made.
+Once the developers determine the set of changes has
+grown large enough or if the API changed in a way
+that makes downstream software unable to use it any longer
+(a backward-incompatible change), the major version number of
 the software will be incremented.
 Each change may be made by a different developer, who may be making their
 first contribution to the software. This implies that a new version
@@ -583,30 +590,39 @@ by both developers and users (corresponding to \joss{} authors and readers, resp
 \section{Conclusions}
 \label{conclusions}
 
-Software today encapsulates---and generates---important research knowledge, yet it has not entered the science publication ecosystem in a practical way.
-This situation is costly for science, through the lack of career progression for valuable personnel: research software developers.
+Software today encapsulates---and generates---important research knowledge, yet
+it has not entered the science publication ecosystem in a practical way.
+This situation is costly for science, through the lack of career progression for
+valuable personnel: research software developers.
 We founded \joss{} in response to the acute need for an answer to this predicament.
-\joss{} is a venue for authors who wish to receive constructive peer feedback, publish, and collect citations for their research software.
-The number of submissions confirms the keen demand for this publishing mechanism: more than 100 accepted articles in the first year and more than 40 others under review.
-Community members have also responded positively when asked to review submissions in an open and non-traditional format, contributing useful reviews of the submitted software.
-However, we are still overcoming initial hurdles to achieve our goals. \joss{} is currently not properly indexed by Google Scholar, despite the fact that \joss{} articles include the adequate metadata, and that we made an explicit request for inclusion on March 2017 (see GitHub \href{https://github.com/openjournals/joss/issues/130}{issue \#130}).
-Also, we may need to invest more effort into raising awareness of good practices for citing \joss{} articles.
+\joss{} is a venue for authors who wish to receive constructive peer feedback,
+publish, and collect citations for their research software.
+The number of submissions confirms the keen demand for this publishing mechanism:
+more than 100 accepted articles in the first year and more than 40 others under review.
+Community members have also responded positively when asked to review submissions
+in an open and non-traditional format, contributing useful reviews of the submitted software.
+However, we are still overcoming initial hurdles to achieve our goals. \joss{} is
+currently not properly indexed by Google Scholar, despite the fact that \joss{}
+articles include \delete{the} adequate metadata, and that we made an explicit request for
+inclusion on March 2017 (see GitHub \href{https://github.com/openjournals/joss/issues/130}{issue \#130}).
+Also, we may need to invest more effort into raising awareness of good practices
+for citing \joss{} articles.
 
 The journal cemented its position in the first year of operation, building trust within the community of open-source research-software developers and growing in name recognition.
 It also earned weighty affiliations with OSI and NumFOCUS, the latter bringing the opportunity to raise funding for sustained operations.
-Although publishing costs are low at \$3--6 per article, \joss{} does need funding, with the editor-in-chief having borne the expenses personally to pull off the journal launch. 
+Although publishing costs are low at \$3--6 per article, \joss{} does need funding, with the editor-in-chief having borne the expenses personally to pull off the journal launch.
 Incorporating a small article charge (waived upon request) may be a route to allow authors to contribute to \joss{} in the future, but we have not yet decided on this change.
 Under the NumFOCUS nonprofit umbrella, \joss{} is now eligible to seek grants for sustaining its future, engaging in new efforts like outreach, and improving its infrastructure and tooling.
 
-Outreach to other communities still unaware of \joss{} is certainly part of our growth strategy. 
+Outreach to other communities still unaware of \joss{} is certainly part of our growth strategy.
 Awareness of the journal so far has mostly spread through word-of-mouth and social networking, plus a couple of news articles~\cite{Nature:joss,SDtimes:joss}.
-We plan to present \joss{} at relevant domain conferences, 
-like we did at the 2017 SIAM Conference 
+We plan to present \joss{} at relevant domain conferences,
+like we did at the 2017 SIAM Conference
 on Computational Science \& Engineering~\cite{JOSS-CSE-poster} and the 16th Annual Scientific Computing with Python Conference (SciPy 2017).
-We are also interested in partnering 
+We are also interested in partnering
 with other domain journals that focus on (traditional) research articles.
-In such partnerships, 
-traditional peer review of the research would be paired with peer review of the software, with \joss{} taking responsibility for the latter. 
+In such partnerships,
+traditional peer review of the research would be paired with peer review of the software, with \joss{} taking responsibility for the latter.
 
 Finally, the infrastructure and tooling of \joss{} have unexpected added values: while developed to
 support and streamline the \joss{} publication process, these open-source tools generalize to a lightweight journal-management system.
@@ -618,10 +634,13 @@ This presents manifold opportunities to expand the ways we assign career credit 
 
 \section*{Acknowledgements}
 
-Work by K.~E.~Niemeyer was supported in part by the National Science Foundation (No.\ ACI-1535065). 
-Work by P.~Prins was supported by the National Institute of Health (R01 GM123489, 2017--2022). 
-Work by K.~Ram was supported in part by The Leona M.\ and Harry B.~Helmsley Charitable Trust (No.\ 2016PG-BRI004). 
-Work by A.~Rokem was supported the Gordon \& Betty Moore Foundation and the Alfred P.~Sloan Foundation, and by grants from the Bill \& Melinda Gates Foundation, the National Science Foundation (No.\ 1550224), and the National Institute of Mental Health (No.\ 1R25MH112480).
+Work by K.~E.~Niemeyer was supported in part by the National Science Foundation (No.\ ACI-1535065).
+Work by P.~Prins was supported by the National Institute of Health (R01 GM123489, 2017--2022).
+Work by K.~Ram was supported in part by The Leona M.\ and Harry B.~Helmsley Charitable Trust (No.\ 2016PG-BRI004).
+Work by A.~Rokem was supported \add{by} the Gordon \& Betty Moore Foundation and
+the Alfred P.~Sloan Foundation, and by grants from the Bill \& Melinda Gates
+Foundation, the National Science Foundation (No.\ 1550224), and the National
+Institute of Mental Health (No.\ 1R25MH112480).
 
 \printbibliography
 
