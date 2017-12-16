@@ -578,33 +578,38 @@ And, since the \joss{} tools are open source, we welcome contributions in the fo
 
 Beyond roles and responsibilities for the editors, and improvements to the \joss{} tools and infrastructure, we will take on the more tricky questions about publishing software.
 One of these is how to handle new software versions.
-Unlike traditional research articles, which once published are static, software needs to change
-over time, at least for maintenance and to avoid software
-rot\slash collapse (where software stops working because
+Unlike traditional research articles, which once published are static,
+software likely changes over time, at least for maintenance and to avoid
+software rot\slash collapse (where software stops working because
 of changes in the environment, such as dependencies on
 libraries or operating system).
-Because software needs to be under continuous development for
-maintenance, and because the potential uses of the
-software are seldom known at the start of a project,
+% \delete{Because software needs to be under continuous development for
+% maintenance, and because the potential uses of the
+% software are seldom known at the start of a project,}
+\add{Furthermore, because potential uses of the
+software are seldom known at the start of a project,}
 the need or opportunity arises to add features, improve performance,
-improve accuracy, etc. Once one or more changes have been made,
+improve accuracy, etc. 
+%\delete{Once one or more changes have been made} 
+\add{After making one or more changes},
 software developers frequently rename the software with a new
-version number. Following semantic versioning practices (where software versions are of the form \texttt{MAJOR.MINOR.PATCH}, see \href{http://semver.org}{semver.org}), a small
+version number. Following semantic versioning practices\footnote{Semantic versioning refers to the practice where software versions are of the form \texttt{MAJOR.MINOR.PATCH}, see \href{http://semver.org}{semver.org}).}, a small
 set of changes may lead to an increased version of the software;
 i.e., the patch element of the version number is incremented,
 or possibly the minor element is incremented if enough changes have been made.
 Once the developers determine the set of changes has
 grown large enough or if the API changed in a way
 that makes downstream software unable to use it any longer
-(a backward-incompatible change), the major version number of
+(i.e., a backward-incompatible change), the major version number of
 the software will be incremented.
-Each change may be made by a different developer, who may be making their
-first contribution to the software. This implies that a new version
-might correspond to a new set of authors if the software is published.
-Exactly how this process translates to \joss{} is not yet clear.
-The editorial board is supportive of a model where a new \joss{} article is published with each major version, but
-the details of how this would work, and whether it would be accepted
-by both developers and users (corresponding to \joss{} authors and readers, respectively) is unknown.
+Each change may be made by a different developer, who may be making
+their first contribution to the software. This implies that a new
+version might correspond to a new set of authors if the software is published, but \add{this process may not translate clearly to \joss{}.}
+% The editorial board \add{supports} a model where \add{authors publish a new \joss{} article with each major version}, 
+% but \add{we do not yet know}
+% the details of how this would work, and whether it would be accepted
+% by both developers and users (corresponding to \joss{} authors and readers, respectively).
+\add{The editorial board will accept a new \joss{} article published with each major version or even a minor version if the changes seem significant enough to the editor and reviewer(s), but we do not know if this will be satisfactory to the needs of both developers and users (corresponding to JOSS authors and readers, respectively).}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
