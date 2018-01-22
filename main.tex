@@ -218,7 +218,7 @@ Acceptable \joss{} submissions also need to meet the following criteria:
     \item The software must be open source by the Open Source Initiative (OSI) definition (\href{https://opensource.org}{opensource.org}).
     \item The software must have a research application.
     \item The submitter should be a major contributor to the software they are submitting.
-    \item The software should be a significant new contribution to the available open-source software that either enables some new research challenge(s) to be addressed or makes addressing research challenges significantly better (e.g., faster, easier, simpler.)
+    \item The software should be a significant new contribution to the available open-source software that either enables some new research challenge(s) to be addressed or makes addressing research challenges significantly better (e.g., faster, easier, \add{simpler).}
     \item The software should be feature-complete, i.e., it cannot be a partial solution.
 \end{itemize}
 
@@ -242,7 +242,7 @@ This application also automatically creates the review issue on GitHub once a su
 
 \subsubsection*{Open peer review on GitHub}
 
-\joss{} conducts reviews on the \texttt{joss-reviews} GitHub repository~\cite{joss-reviews}.  Review of a submission begins by the opening of a new GitHub issue, where the editor-in-chief assigns an editor, the editor assigns a reviewer, and interactions between authors, reviewer(s), and editor proceed in the open. Figure~\ref{fig:review} shows an example of a recent review for the (accepted) \texttt{hdbscan} package~\cite{McInnes2017}.
+\joss{} conducts reviews on the \texttt{joss-reviews} GitHub repository~\cite{joss-reviews}.  Review of a submission begins \delete{by}\add{with} the opening of a new GitHub issue, where the editor-in-chief assigns an editor, the editor assigns a reviewer, and interactions between authors, reviewer(s), and editor proceed in the open. Figure~\ref{fig:review} shows an example of a recent review for the (accepted) \texttt{hdbscan} package~\cite{McInnes2017}.
 The actual review includes the code, software functionality\slash performance claims, test suite (if present), documentation, and any other material associated with the software.
 
 
@@ -328,7 +328,7 @@ The editor then asked the automated bot \texttt{Whedon} to create the main submi
 
 \item The reviewer then conducted the submission review~\cite{hdbscan-joss-review} (see Figure~\ref{fig:review}) by working through a checklist of review items, as described in \S\ref{review-details}. The author, reviewer, and editor discussed any questions that arose during the review, and once the reviewer completed their checks, they notified the submitting author and editor.
 Compared with traditional journals, \joss{} offers the unique feature of holding a discussion---in the open within a GitHub issue---between the reviewer(s), author(s), and editor.
-Like a true conversation, discussion can go back and forth in minutes or seconds, with all parties contributing at will. This contrasts traditional journal reviews, where the process is merely an exchange between the reviewer(s) and author(s), via the editor, which can take months for each communication, and in practice is limited to one or two, perhaps three in some cases, exchanges due to that delay~\cite{tennant-peerreview}.
+Like a true conversation, discussion can go back and forth in minutes or seconds, with all parties contributing at will. This contrasts \add{with} traditional journal reviews, where the process is merely an exchange between the reviewer(s) and author(s), via the editor, which can take months for each communication, and in practice is limited to one or two, perhaps three in some cases, exchanges due to that delay~\cite{tennant-peerreview}.
 
 Note that \joss{} reviews are subject to a code of conduct~\cite{code-of-conduct}, adopted from the Contributor Covenant Code of Conduct~\cite{contributor-covenant-coc}.
 Both authors and reviewers must confirm that they have read and will adhere to this Code of Conduct, during submission and with their review, respectively.
@@ -376,7 +376,7 @@ The specific items in the reviewer checklist are:
 \item General checks
 
 \begin{itemize}
-    \item \textbf{Repository}: Is the source code for this software available at the repository url?
+    \item \textbf{Repository}: Is the source code for this software available at the repository \add{URL}?
     \item \textbf{License}: Does the repository contain a plain-text LICENSE file with the contents of an OSI-approved software license?
     \item \textbf{Version}: Does the release version given match the GitHub release?
     \item \textbf{Authorship}: Has the submitting author made major contributions to the software?
@@ -399,7 +399,7 @@ The specific items in the reviewer checklist are:
     \item \textbf{Example usage}: Do the authors include examples of how to use the software (ideally to solve real-world analysis problems)?
     \item \textbf{Functionality documentation}: Is the core functionality of the software documented to a satisfactory level (e.g., API method documentation)?
     \item \textbf{Automated tests}: Are there automated tests or manual steps described so that the function of the software can be verified?
-    \item \textbf{Community guidelines}: Are there clear guidelines for third parties wishing to 1) contribute to the software 2) report issues or problems with the software, and 3) seek support?
+    \item \textbf{Community guidelines}: Are there clear guidelines for third parties wishing to 1) contribute to the software\add{,} 2) report issues or problems with the software, and 3) seek support?
 \end{itemize}
 
 \item Software paper
@@ -663,7 +663,7 @@ Finally, the infrastructure and tooling of \joss{} have unexpected added values:
 support and streamline the \joss{} publication process, these open-source tools generalize to a lightweight journal-management system.
 The \joss{} web application and submission tool, the \texttt{Whedon} RubyGem library, and the \texttt{Whedon-API} bot could be easily forked to create overlay journals for other content types (data sets, posters, figures, etc.).
 The original artifacts could be archived on other
-services such as figshare, Zenodo, Dryad, arXiv, or engrXiv\slash AgriXiv\slash LawArXiv\slash PsyArXiv\slash SocArXiv\slash bioRxiv.
+services such as \add{Figshare}, Zenodo, Dryad, arXiv, or engrXiv\slash AgriXiv\slash LawArXiv\slash PsyArXiv\slash SocArXiv\slash bioRxiv.
 This presents manifold opportunities to expand the ways we assign career credit to the digital artifacts of research.
 \joss{} was born to answer the needs of research software developers to thrive in the current merit traditions of science, but we may have come upon a generalizable formula for digital science.
 
