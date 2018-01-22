@@ -41,14 +41,14 @@
 \newcommand{\delete}[1]{\sloppy\cbcolor{red}\textcolor{red}{\cbdelete \sout{#1}}}
 \newcommand{\addnoul}[1]{{\textcolor{teal}{#1}}}     % add with no underline
 \newcommand{\deletenoso}[1]{{\textcolor{red}{#1}}}    % delete with no strikeout
-% For the final version, use these four commands instead
-\renewcommand{\add}[1]{#1}
-\renewcommand{\addnoul}[1]{#1}
-\renewcommand{\delete}[1]{}
-\renewcommand{\deletenoso}[1]{}
+% % For the final version, use these four commands instead
+% \renewcommand{\add}[1]{#1}
+% \renewcommand{\addnoul}[1]{#1}
+% \renewcommand{\delete}[1]{}
+% \renewcommand{\deletenoso}[1]{}
 
 % remove for final
-\usepackage{lineno}
+%\usepackage{lineno}
 
 \newcommand\joss{\textit{JOSS}}
 
@@ -96,7 +96,7 @@ Melbourne, Melbourne, Australia}
 \maketitle
 
 % remove for final
-\linenumbers
+%\linenumbers
 
 \begin{abstract}
 This article describes the motivation, design, and progress of the Journal of Open Source Software (\joss{}).
@@ -125,19 +125,19 @@ The \textit{Journal of Open Source Software} (\joss{}) was founded in May 2016 t
 It is a developer-friendly, free and open-access, peer-reviewed journal for research software packages.
 \joss{} recently passed its first anniversary, having published more than a hundred articles.
 This article discusses the motivation for creating a new software journal, delineates the editorial and review process, and summarizes the journal's first year of operation via submission statistics.
-\add{We expect this article to be of interest to three core audiences: (1) researchers who develop software and could submit their work to \joss{},
+We expect this article to be of interest to three core audiences: (1) researchers who develop software and could submit their work to \joss{},
 (2) those in the community with an interest in advancing scholarly communications who may appreciate the technical details of the \joss{} journal framework, and
-(3) those interested in possibilities for citing software in their own research publications.}
+(3) those interested in possibilities for citing software in their own research publications.
 
 The sixteen authors of this article are the members of the \joss{} Editorial Board at the end of its first year (May 2017). Arfon Smith is the founding editor-in-chief, and the founding editors are Lorena A.~Barba, Kathryn Huff, Daniel Katz, Christopher Madan, Abigail Cabunoc Mayes, Kevin Moerman, Kyle Niemeyer, Karthik Ram, Tracy Teal, and Jake Vanderplas.
 Five new editors joined in the first year to handle areas not well covered by the original editors, and to help manage the large and growing number of submissions. They are George Githinji, Melissa Gymrek, Pjotr Prins, Ariel Rokem, and Roman Valls Guimera.
-\add{(Since then, we have added three more editors: Jason Clark, Lindsey Heagy, and Thomas Leeper.)}
+(Since then, we have added three more editors: Jason Clark, Lindsey Heagy, and Thomas Leeper.)
 
 The \joss{} editors are firm supporters of open-source software for research, with extensive knowledge of the practices and ethics of open source. This knowledge is reflected in the \joss{} submission system, peer-review process, and infrastructure. The journal offers a familiar environment for developers and authors to interact with reviewers and editors, leading to a citable published work: a software article.
-\add{The article describes the software at a high level, and the software itself includes both source code and associated artifacts such as tests, documentation, and examples.}
+The article describes the software at a high level, and the software itself includes both source code and associated artifacts such as tests, documentation, and examples.
 With a Crossref digital object identifier (DOI), the article is able to collect citations, empowering the developers/authors to gain career credit for their work.
 \joss{} thus fills a pressing need for computational researchers to advance professionally, while promoting higher quality software for science.
-\add{\joss{} also supports the broader open-science movement by encouraging researchers to share their software openly and follow best practices in its development.}
+\joss{} also supports the broader open-science movement by encouraging researchers to share their software openly and follow best practices in its development.
 
 
 \section{Background and motivation}\label{background}
@@ -180,7 +180,7 @@ He includes both generalist journals, accepting software articles from a variety
 %
 For many journals, particularly the domain-specific ones, a software article must include novel results to justify publication.
 
-From the developer's point of view, writing a software article can involve a great deal of extra work. Good software includes documentation for both users and developers that is sufficient to make it understandable. A software article may contain much of the same content, merely in a different format, and developers may not find value in rewriting their documentation in a manner \delete{that is perhaps} less useful to their users and collaborators.
+From the developer's point of view, writing a software article can involve a great deal of extra work. Good software includes documentation for both users and developers that is sufficient to make it understandable. A software article may contain much of the same content, merely in a different format, and developers may not find value in rewriting their documentation in a manner less useful to their users and collaborators.
 These issues may lead developers to shun the idea of software articles and prefer to publish the software itself. Yet, software citation is not common and the mostly one-dimensional credit model of academia (based on article citations) means that publishing software often does not ``count'' for career progression~\cite{Smith2016,Niemeyer:2016sc}.
 
 
@@ -188,15 +188,15 @@ These issues may lead developers to shun the idea of software articles and prefe
 \section{The Journal of Open Source Software}
 
 To tackle the challenges mentioned above, the \textit{Journal of Open Source Software} (\joss{}) launched in May 2016~\cite{arfondotorg} with the goal of drastically reducing the overhead of publishing software articles.
-\joss{} offers developers a venue to publish their \add{complete} research software\delete{, dressed up as software articles} \add{ wrapped in relatively short high-level articles}, thus enabling citation credit for their work.
+\joss{} offers developers a venue to publish their complete research software wrapped in relatively short high-level articles, thus enabling citation credit for their work.
 In this section we describe the goals and principles, infrastructure, and business model of \joss{}, and compare it with other software journals.
 
 \subsection{Goals and principles}
 
 \joss{} articles are deliberately short and only include an abstract describing the high-level functionality of the software, a list of the authors of the software (with their affiliations), a list of key references, and a link to the software archive and software repository. Articles are not allowed to include other content often found in software articles, such as descriptions of the API (application programming interface) and novel research results obtained using the software.
 The software API should already be described in the software documentation, and domain research results do not belong in \joss{}---these should be published in a domain journal.
-\add{Unlike most journals, which ease discoverability of new research and findings, \joss{} serves primarily as a mechanism for software developers\slash authors to improve and publish their research software.
-Thus, software discovery is a secondary feature.}
+Unlike most journals, which ease discoverability of new research and findings, \joss{} serves primarily as a mechanism for software developers\slash authors to improve and publish their research software.
+Thus, software discovery is a secondary feature.
 
 The \joss{} design and %review process
 implementation are based on the following principles:
@@ -243,7 +243,7 @@ This application also automatically creates the review issue on GitHub once a su
 \subsubsection*{Open peer review on GitHub}
 
 \joss{} conducts reviews on the \texttt{joss-reviews} GitHub repository~\cite{joss-reviews}.  Review of a submission begins by the opening of a new GitHub issue, where the editor-in-chief assigns an editor, the editor assigns a reviewer, and interactions between authors, reviewer(s), and editor proceed in the open. Figure~\ref{fig:review} shows an example of a recent review for the (accepted) \texttt{hdbscan} package~\cite{McInnes2017}.
-\add{The actual review includes the code, software functionality\slash performance claims, test suite (if present), documentation, and any other material associated with the software.}
+The actual review includes the code, software functionality\slash performance claims, test suite (if present), documentation, and any other material associated with the software.
 
 
 \begin{figure}[t]
@@ -286,8 +286,8 @@ Any code snippets included in \joss{} articles are subject to the MIT license~\c
 \label{comparison}
 
 A good number of journals now accept, review, and publish software articles~\cite{software-papers-list},
-\add{which we group into two categories.
-The first category of journals include those similar to \joss{}, which do not focus on a specific domain and only consider submissions of software\slash software articles:}
+which we group into two categories.
+The first category of journals include those similar to \joss{}, which do not focus on a specific domain and only consider submissions of software\slash software articles:
 the \textit{Journal of Open Research Software} (\textit{JORS},
 \href{http://openresearchsoftware.metajnl.com}{openresearchsoftware.metajnl.com}),
 \textit{SoftwareX}
@@ -299,13 +299,11 @@ The role and form of peer review also varies across journals.
 In \textit{SoftwareX} and \textit{JORS}, the goal of the review is both to decide if the article is acceptable for publication and to improve it iteratively through a non-public, editor-mediated interaction between the authors and the anonymous reviewers.
 In contrast, \joss{} has the goal of accepting most articles after improving them as needed, with the reviewers and authors communicating directly and publicly through GitHub issues.
 
-\add{
 The second category includes domain-specific journals that either accept software articles as a special submission type or exclusively consider software articles targeted at the domain.
 For example, \textit{Collected Algorithms} (CALGO, \href{http://www.acm.org/calgo/}{acm.org/calgo}) is a long-running venue for reviewing and sharing mathematical algorithms associated with articles published in \textit{Transactions on Mathematical Software} and other ACM journals.
 However, CALGO authors must transfer copyright to ACM and software is not available under an open-source license---this contrasts with \joss{}, where authors retain copyright and software must be shared under an open-source license.
 \textit{Computer Physics Communications} (\href{https://www.journals.elsevier.com/computer-physics-communications}{journals.elsevier.com/computer-physics-communications}) and \textit{Geoscientific Model Development} (\href{https://www.geoscientific-model-development.net/}{geoscientific-model-development.net}) publish full-length articles describing application software in computational physics and geoscience, respectively, where review primarily focuses on the article.
 Chue Hong maintains a list of journals in both categories~\cite{software-papers-list}.
-}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -324,7 +322,7 @@ Figure~\ref{fig:submission-flow} shows a typical \joss{} submission and review p
 The article is a Markdown file named \texttt{paper.md}, visibly located in the software repository (here, and in many cases, placed together with auxiliary files in a \texttt{paper} directory).
 
 \item Following a routine check by a \joss{} administrator, a ``pre-review'' issue was created in the \texttt{joss-reviews} GitHub repository~\cite{hdbscan-joss-pre-review}. In this pre-review issue, an editor (Daniel S.~Katz) was assigned, who then identified and assigned a suitable reviewer (Zhao Zhang).
-\add{Editors generally identify one or more reviewers from a pool of volunteers based on provided programming language and\slash or domain expertise.}\footnote{Potential reviewers can volunteer via \url{http://joss.theoj.org/reviewer-signup.html}}
+Editors generally identify one or more reviewers from a pool of volunteers based on provided programming language and\slash or domain expertise.\footnote{Potential reviewers can volunteer via \url{http://joss.theoj.org/reviewer-signup.html}}
 
 The editor then asked the automated bot \texttt{Whedon} to create the main submission review issue via the command \texttt{@whedon start review magic-word=bananas}. (``\texttt{magic-word=bananas}'' is a safeguard against accidentally creating a review issue prematurely.)
 
@@ -343,7 +341,7 @@ Both authors and reviewers must confirm that they have read and will adhere to t
 
 \end{enumerate}
 
-\add{Authors can also first submit a pre-submission inquiry via an issue in the main \joss{} repository~\cite{joss-site} if they have questions regarding the suitability of their software for publication, or for any other questions.}
+Authors can also first submit a pre-submission inquiry via an issue in the main \joss{} repository~\cite{joss-site} if they have questions regarding the suitability of their software for publication, or for any other questions.
 
 \begin{figure}[htp]
 \centering
@@ -358,7 +356,7 @@ Both authors and reviewers must confirm that they have read and will adhere to t
 
 As previously mentioned, the \joss{} review is primarily concerned with the material
 in the software repository, focusing on the software and documentation.
-\add{We do not ask authors to use their software in a research study or include research results in their article beyond as examples; submissions focused on results rather than software should be submitted to research journals.}
+We do not ask authors to use their software in a research study or include research results in their article beyond as examples; submissions focused on results rather than software should be submitted to research journals.
 The specific items in the reviewer checklist are:
 
 \begin{itemize}
@@ -366,9 +364,8 @@ The specific items in the reviewer checklist are:
 
 \begin{itemize}
     \item As the reviewer I confirm that
-    \delete{there are no conflicts of interest for me to review this work (such as being a major contributor to the software).}
-    \add{I have read the \joss{} \href{https://github.com/openjournals/joss/blob/master/COI.md}{conflict of interest policy}
-    and that there are no conflicts of interest for me to review this work.}
+    I have read the \joss{} \href{https://github.com/openjournals/joss/blob/master/COI.md}{conflict of interest policy}
+    and that there are no conflicts of interest for me to review this work.
 \end{itemize}
 
 \item Code of Conduct
@@ -466,10 +463,9 @@ responses). In contrast, the latter case took much longer due to
 delays in selecting an editor and finding an appropriate reviewer, and a
 multimonth delay between selecting a reviewer and receiving reviews.
 In other cases with long review periods, some delays in responding to requests
-for updates may be attributed to reviewers (or editors) missing GitHub \add{notifications}
+for updates may be attributed to reviewers (or editors) missing GitHub notifications
 from the review issue comments.
-\add{We have already taken steps to improve the ability of authors, reviewers, and editors to keep track of their submissions, including a prompt to new reviewers to unsubscribe from the main \texttt{joss-reviews} repository~\cite{joss-reviews} (to reduce unnecessary notifications) and a weekly digest email for \joss{} editors to keep track of their submissions. In the future we may collect the email addresses of reviewers so we can extend this functionality to them.
-}
+We have already taken steps to improve the ability of authors, reviewers, and editors to keep track of their submissions, including a prompt to new reviewers to unsubscribe from the main \texttt{joss-reviews} repository~\cite{joss-reviews} (to reduce unnecessary notifications) and a weekly digest email for \joss{} editors to keep track of their submissions. In the future we may collect the email addresses of reviewers so we can extend this functionality to them.
 
 \begin{figure}[htbp]
     \centering
@@ -482,8 +478,7 @@ from the review issue comments.
 Figure~\ref{fig:programming_languages} shows the frequency of programming languages appearing
 in \joss{} articles. Python appears the most with over half of published software articles
 (54), while R is used in nearly one-third of articles (29).
-\add{We believe the popularity of Python and R in \joss{} submissions is the result of (1) the adoption of these languages (and open-source practices) in scientific computing communities and (2) our relationship with the rOpenSci project.
-}
+We believe the popularity of Python and R in \joss{} submissions is the result of (1) the adoption of these languages (and open-source practices) in scientific computing communities and (2) our relationship with the rOpenSci project.
 
 \begin{figure}[htbp]
     \centering
@@ -547,11 +542,10 @@ Also, authors can now select during submission the appropriate editor based on a
     \label{fig:affiliations}
 \end{figure}
 
-\add{Lastly, we analyzed the affiliations of the 286 authors associated with articles published in the first year.
+Lastly, we analyzed the affiliations of the 286 authors associated with articles published in the first year.
 Figure~\ref{fig:affiliations} shows the number of authors per country; we represented authors with multiple affiliations in different countries using their first affiliation. Authors with no affiliation, or where we could not identify the country, are shown as ``unknown.''
 From the articles published in the first year, approximately 48\% of authors live in the United States and approximately 40\% live in Europe (including Switzerland). The remaining 12\% come from the rest of the world, most notably Australia (6.6\%) and Canada (2.1\%).
 Moving forward, we hope to receive submissions from authors in more countries that even better represent who develops research software around the world; one strategy to achieve this involves continuing to expand our editorial board.
-}
 
 
 In its first year, \joss{} also developed formal relationships with two US-based nonprofit organizations. In March 2017, \joss{} became a community affiliate of the Open Source Initiative (\href{https://opensource.org}{opensource.org}), the steward of the open-source definition, which promotes open-source software and educates about appropriate software licenses.
@@ -565,7 +559,7 @@ Furthermore, as a NumFOCUS project, \joss{} will be able to raise funding to sus
 \section{The next year for \joss{}}
 
 Our focus for the next year will be on continuing to provide a high-quality experience
-for submitting authors and reviewers, and making \add{the} best use of the editorial board.
+for submitting authors and reviewers, and making the best use of the editorial board.
 In our first year, we progressed from a model where the editor-in-chief handled
 most central functions to one with more distributed roles for the editors,
 particularly that of ensuring that reviews are useful and timely.
@@ -587,13 +581,13 @@ software usually changes over time, at least for maintenance and to avoid
 software rot\slash collapse (where software stops working because
 of changes in the environment, such as dependencies on
 libraries or operating system).
-\add{Furthermore, because all potential uses of the software are not
+Furthermore, because all potential uses of the software are not
 known at the start of a project, the need or opportunity arises to add
 features, improve performance, improve accuracy, etc.
 After making one or more changes, software developers frequently update the software with a new version number.
 Over time, the culmination of these changes may result in a major update to the software, and with many new contributors a new version might correspond to a new set of authors if the software is published.
 However, this process may not translate clearly to \joss{}.
-The editorial board will accept a new \joss{} article published with each major version or even a minor version if the changes seem significant enough to the editor and reviewer(s), but we do not yet know if this will satisfy the needs of both developers and users (corresponding to \joss{} authors and readers, respectively).}
+The editorial board will accept a new \joss{} article published with each major version or even a minor version if the changes seem significant enough to the editor and reviewer(s), but we do not yet know if this will satisfy the needs of both developers and users (corresponding to \joss{} authors and readers, respectively).
 
 % Following semantic versioning practices\footnote{Semantic versioning refers to the practice where software versions are of the form \texttt{MAJOR.MINOR.PATCH}, see \href{http://semver.org}{semver.org}).}, a small
 % set of changes may lead to an increased version of the software;
@@ -610,12 +604,11 @@ The editorial board will accept a new \joss{} article published with each major 
 % \add{The editorial board will accept a new \joss{} article published with each major version or even a minor version if the changes seem significant enough to the editor and reviewer(s), but we do not know if this will be satisfactory to the needs of both developers and users (corresponding to \joss{} authors and readers, respectively).}
 
 
-\add{The discussion about new software versions also generally applies to software forks, where software is copied and, after some divergent development, a new software package emerges.
+The discussion about new software versions also generally applies to software forks, where software is copied and, after some divergent development, a new software package emerges.
 Similar to how we handle new software versions, the \joss{} editorial board will consider publication of an article describing a forked version of software if it includes substantial changes from a previously published version.
 Authorship questions may be more challenging when dealing with forks compared with new versions, since forks can retain varying amounts of code from the original projects.
 However, while a version control history generally makes it easy to suggest people who should be authors, deciding on authorship can be difficult and subjective, and is therefore ultimately project-dependent.
 We prefer to leave authorship decisions to the projects, with discussion taking place as needed with reviewers and editors.
-}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -629,25 +622,25 @@ valuable personnel: research software developers.
 We founded \joss{} in response to the acute need for an answer to this predicament.
 \joss{} is a venue for authors who wish to receive constructive peer feedback,
 publish, and collect citations for their research software.
-\add{By encouraging researchers to develop their software following best practices, and then share and publish it openly, \joss{} supports the broader open-science movement.}
+By encouraging researchers to develop their software following best practices, and then share and publish it openly, \joss{} supports the broader open-science movement.
 The number of submissions confirms the keen demand for this publishing mechanism:
 more than 100 accepted articles in the first year and more than 40 others under review.
-\add{By the end of 2017, \joss{} has published nearly 200 articles.}
+By the end of 2017, \joss{} has published nearly 200 articles.
 Community members have also responded positively when asked to review submissions
 in an open and non-traditional format, contributing useful reviews of the submitted software.
 
 However, we are still overcoming initial hurdles to achieve our goals. \joss{} is
-currently not \add{fully} indexed by Google Scholar, despite the fact that \joss{}
-articles include \delete{the} adequate metadata and that we made an explicit request for
+currently not fully indexed by Google Scholar, despite the fact that \joss{}
+articles include adequate metadata and that we made an explicit request for
 inclusion in March 2017 (see GitHub \href{https://github.com/openjournals/joss/issues/130}{issue \#130}).
 Also, we may need to invest more effort into raising awareness of good practices
 for citing \joss{} articles.
-\add{That said, we have some preliminary citation statistics: according to Google Scholar, \texttt{corner.py}~\cite{cornerpy} and \texttt{Armadillo}~\cite{armadillo} have been cited the most at 116 and 79 times, respectively.
+That said, we have some preliminary citation statistics: according to Google Scholar, \texttt{corner.py}~\cite{cornerpy} and \texttt{Armadillo}~\cite{armadillo} have been cited the most at 116 and 79 times, respectively.
 Crossref's Cited-by service---which relies on publishers depositing reference information---reports 45 and 28 citations for the same articles~\cite{crossref-cited-by}.
 While most other articles have received no citations to-date, a few have been cited between one and five times.
 We have had at least two ``repeat'' submissions, i.e., submissions of a new version with major changes from a prior version.
 Clementi et al.~\cite{CClementi2017} published \texttt{PyGBe-LSPR}, a new version that added substantially new features over the original \texttt{PyGBe} of Cooper et al.~\cite{DCooper2016}.
-Similarly, the software published by Sandersen and Curtin~\cite{Sanderson2017} extended on (and cited) their earlier article~\cite{Sanderson2016}.}
+Similarly, the software published by Sandersen and Curtin~\cite{Sanderson2017} extended on (and cited) their earlier article~\cite{Sanderson2016}.
 
 The journal cemented its position in the first year of operation, building trust within the community of open-source research-software developers and growing in name recognition.
 It also earned weighty affiliations with OSI and NumFOCUS, the latter bringing the opportunity to raise funding for sustained operations.
@@ -656,8 +649,8 @@ Incorporating a small article charge (waived upon request) may be a route to all
 Under the NumFOCUS nonprofit umbrella, \joss{} is now eligible to seek grants for sustaining its future, engaging in new efforts like outreach, and improving its infrastructure and tooling.
 
 Outreach to other communities still unaware of \joss{} is certainly part of our growth strategy.
-Awareness of the journal so far has mostly spread through word-of-mouth and social networking\add{~\cite{tauber-blog,titus-blog}}, plus a couple of news articles~\cite{Nature:joss,SDtimes:joss}.
-\add{As of August 2017, \joss{} is also listed in the Directory of Open Access Journals (DOAJ) (\href{https://doaj.org/toc/2475-9066}{doaj.org/toc/2475-9066}).}
+Awareness of the journal so far has mostly spread through word-of-mouth and social networking~\cite{tauber-blog,titus-blog}, plus a couple of news articles~\cite{Nature:joss,SDtimes:joss}.
+As of August 2017, \joss{} is also listed in the Directory of Open Access Journals (DOAJ) (\href{https://doaj.org/toc/2475-9066}{doaj.org/toc/2475-9066}).
 We plan to present \joss{} at relevant domain conferences,
 like we did at the 2017 SIAM Conference
 on Computational Science \& Engineering~\cite{JOSS-CSE-poster} and the 16th Annual Scientific Computing with Python Conference (SciPy 2017).
@@ -680,7 +673,7 @@ This work was supported in part by the Alfred P.\ Sloan Foundation.
 Work by K.~E.~Niemeyer was supported in part by the National Science Foundation (No.\ ACI-1535065).
 Work by P.~Prins was supported by the National Institute of Health (R01 GM123489, 2017--2022).
 Work by K.~Ram was supported in part by The Leona M.\ and Harry B.~Helmsley Charitable Trust (No.\ 2016PG-BRI004).
-Work by A.~Rokem was supported \add{by} the Gordon \& Betty Moore Foundation and
+Work by A.~Rokem was supported by the Gordon \& Betty Moore Foundation and
 the Alfred P.~Sloan Foundation, and by grants from the Bill \& Melinda Gates
 Foundation, the National Science Foundation (No.\ 1550224), and the National
 Institute of Mental Health (No.\ 1R25MH112480).
