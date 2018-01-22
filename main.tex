@@ -48,7 +48,7 @@
 % \renewcommand{\deletenoso}[1]{}
 
 % remove for final
-%\usepackage{lineno}
+\usepackage{lineno}
 
 \newcommand\joss{\textit{JOSS}}
 
@@ -71,7 +71,7 @@
 \author[15]{Roman Valls Guimera}
 \author[13]{Jacob~T.~Vanderplas}
 
-\date{December 2017}
+\date{January 2018}
 
 \affil[1]{Data Science Mission Office, Space Telescope Science Institute, Baltimore, MD, USA}
 \affil[2]{School of Mechanical, Industrial, and Manufacturing Engineering, Oregon State University, Corvallis, OR, USA}
@@ -96,7 +96,7 @@ Melbourne, Melbourne, Australia}
 \maketitle
 
 % remove for final
-%\linenumbers
+\linenumbers
 
 \begin{abstract}
 This article describes the motivation, design, and progress of the Journal of Open Source Software (\joss{}).
@@ -112,7 +112,7 @@ Editors, reviewers, and authors work collaboratively and openly.
 Unlike other journals, \joss{} does not reject articles requiring major revision; while not yet accepted, articles remain visible and under review until the authors make adequate changes (or withdraw, if unable to meet requirements).
 Once an article is accepted, \joss{} gives it a digital object identifier (DOI), deposits its metadata in Crossref, and the article can begin collecting citations on indexers like Google Scholar and other services.
 Authors retain copyright of their \joss{} article, releasing it under a Creative Commons Attribution 4.0 International License.
-In its first year, starting in May 2016, \joss{} published 111 articles, with more than 40 additional articles currently under review.
+In its first year, starting in May 2016, \joss{} published 111 articles, with more than 40 additional articles \delete{currently} under review.
 \joss{} is a sponsored project of the nonprofit organization NumFOCUS and is an affiliate of the Open Source Initiative (OSI).
 \end{abstract}
 
@@ -123,7 +123,7 @@ Modern scientific research produces many outputs beyond traditional articles and
 Current practices for publishing and citation do not, however, acknowledge software as a first-class research output. This deficiency means that researchers who develop software face critical career barriers.
 The \textit{Journal of Open Source Software} (\joss{}) was founded in May 2016 to offer a solution within the existing publishing mechanisms of science.
 It is a developer-friendly, free and open-access, peer-reviewed journal for research software packages.
-\joss{} recently passed its first anniversary, having published more than a hundred articles.
+\add{By its first anniversary, \joss{} had published more than a hundred articles.}
 This article discusses the motivation for creating a new software journal, delineates the editorial and review process, and summarizes the journal's first year of operation via submission statistics.
 We expect this article to be of interest to three core audiences: (1) researchers who develop software and could submit their work to \joss{},
 (2) those in the community with an interest in advancing scholarly communications who may appreciate the technical details of the \joss{} journal framework, and
@@ -131,7 +131,7 @@ We expect this article to be of interest to three core audiences: (1) researcher
 
 The sixteen authors of this article are the members of the \joss{} Editorial Board at the end of its first year (May 2017). Arfon Smith is the founding editor-in-chief, and the founding editors are Lorena A.~Barba, Kathryn Huff, Daniel Katz, Christopher Madan, Abigail Cabunoc Mayes, Kevin Moerman, Kyle Niemeyer, Karthik Ram, Tracy Teal, and Jake Vanderplas.
 Five new editors joined in the first year to handle areas not well covered by the original editors, and to help manage the large and growing number of submissions. They are George Githinji, Melissa Gymrek, Pjotr Prins, Ariel Rokem, and Roman Valls Guimera.
-(Since then, we have added three more editors: Jason Clark, Lindsey Heagy, and Thomas Leeper.)
+(Since then, we \delete{have} added three more editors: Jason Clark, Lindsey Heagy, and Thomas Leeper.)
 
 The \joss{} editors are firm supporters of open-source software for research, with extensive knowledge of the practices and ethics of open source. This knowledge is reflected in the \joss{} submission system, peer-review process, and infrastructure. The journal offers a familiar environment for developers and authors to interact with reviewers and editors, leading to a citable published work: a software article.
 The article describes the software at a high level, and the software itself includes both source code and associated artifacts such as tests, documentation, and examples.
@@ -556,9 +556,9 @@ Furthermore, as a NumFOCUS project, \joss{} will be able to raise funding to sus
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The next year for \joss{}}
+\section{The second year for \joss{}}
 
-Our focus for the next year will be on continuing to provide a high-quality experience
+Our focus for the \add{second} year will be on continuing to provide a high-quality experience
 for submitting authors and reviewers, and making the best use of the editorial board.
 In our first year, we progressed from a model where the editor-in-chief handled
 most central functions to one with more distributed roles for the editors,
@@ -566,7 +566,7 @@ particularly that of ensuring that reviews are useful and timely.
 Editors can now select and self-assign to submissions they want to manage, while the editor-in-chief only assigns the remaining submissions.
 As \joss{} grows, the process of distributing functions across the editorial board will continue to evolve---and more editors may be needed.
 
-In the next year, we plan to complete a number of high-priority improvements to the \joss{} toolchain.
+In the \add{second} year, we plan to complete a number of high-priority improvements to the \joss{} toolchain.
 Specifically, we plan on automating the final steps for accepting an article.
 For example, generating Crossref metadata and compiling the article are both currently handled by the editor-in-chief on his local machine using the \texttt{Whedon} RubyGem library.
 In the future, we would like authors and reviewers to be able to ask the \texttt{Whedon-API} bot to compile the paper for them, and other editors should be able to ask the bot to complete the submission of Crossref metadata on their behalf.
